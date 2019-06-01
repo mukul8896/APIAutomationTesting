@@ -21,10 +21,10 @@ public class NewTest {
 	  try {
 		  Mukul mukul=new Mukul();
 		  JSONParser parser=new JSONParser();
-		  //JSONObject object=(JSONObject) parser.parse(new FileReader(System.getProperty("user.dir")+"/jsonfile.json"));
-		 // mukul.createPojos(object, System.getProperty("user.dir")+"/src/main/java", "com.mukul.pojoResponse", "Root");
-		  JSONArray array=(JSONArray) parser.parse(new FileReader(System.getProperty("user.dir")+"/jsonfile.json"));
-		  mukul.generatePojos(array, System.getProperty("user.dir")+"/src/main/java", "com.mukul.pojoResponse", "Root",null);
+		  JSONObject object=(JSONObject) parser.parse(new FileReader(System.getProperty("user.dir")+"/jsonexample.json"));
+		 mukul.generatePojos(object, System.getProperty("user.dir")+"/src/main/java", "com.mukul.pojoResponse", "Root");
+		  //JSONArray array=(JSONArray) parser.parse(new FileReader(System.getProperty("user.dir")+"/jsonfile.json"));
+		  //mukul.generatePojos(array, System.getProperty("user.dir")+"/src/main/java", "com.mukul.pojoResponse", "Root",null);
 	  } catch (JsonIOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

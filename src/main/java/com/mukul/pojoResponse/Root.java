@@ -5,7 +5,15 @@ import com.google.gson.annotations.SerializedName;
 
 public class Root{
 
-	@SerializedName("root")
+	@SerializedName("menu")
 	@Expose
-	private List<RootObject> root;
+	private Menu menu;
+	public Menu getMenu() {
+		return menu;
+	}
+	public void setMenu(Menu menu) {
+		this.menu = menu;
+	}
+
+
 }
