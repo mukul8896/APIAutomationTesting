@@ -47,6 +47,8 @@ public class Mukul {
 					writer.println("\tprivate Long "+key+";");
 					generateGetterSetter("Long",key,writer);
 				}else if(object instanceof Boolean) {
+					writer.println("\t@SerializedName("+"\""+key+"\""+")");
+					writer.println("\t@Expose");
 					writer.println("\tprivate Boolean "+key+";");
 				}else if(object == null) {
 					writer.println("\t@SerializedName("+"\""+key+"\""+")");
